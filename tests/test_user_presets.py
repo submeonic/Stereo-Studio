@@ -16,6 +16,8 @@ from wigglegram.user_presets import load_preset, photo_state, save_preset
 def test_defaults_and_main_label_tooltips():
     app = QtWidgets.QApplication.instance() or QtWidgets.QApplication([])
     win = Window()
+    assert win.width.currentData() == 1280
+    assert win.views.value() == 7 and win.fps.value() == 20
     assert win.preview_width.currentData() == 960
     assert win.export_width.currentData() == 1280
     assert win.export_scale.currentData() == 2 and win.aa.isChecked()
@@ -159,3 +161,4 @@ def test_cli_accepts_user_effect_preset(tmp_path, monkeypatch, capsys):
     assert output.exists()
     defaults = parser().parse_args(["render", "input.mpo", "-o", "out.mp4"])
     assert defaults.output_width == 1280 and defaults.supersample == 2
+    assert (defaults.width, defaults.views, defaults.fps) == (1280, 7, 20)

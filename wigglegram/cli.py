@@ -30,7 +30,7 @@ def parser():
     render.add_argument("--right")
     render.add_argument("--swap", action="store_true")
     render.add_argument(
-        "--width", type=int, default=960, help="Cached stereo geometry width; default 960"
+        "--width", type=int, default=1280, help="Cached stereo geometry width; default 1280"
     )
     render.add_argument(
         "--output-width", type=int, default=1280, help="Final width after crop; default 1280"
@@ -66,8 +66,8 @@ def parser():
         help="Pixel coordinates in aligned working-resolution left eye",
     )
     render.add_argument("--strength", type=float, default=0.65)
-    render.add_argument("--views", type=int, default=25)
-    render.add_argument("--fps", type=int, default=30)
+    render.add_argument("--views", type=int, default=7)
+    render.add_argument("--fps", type=int, default=20)
     render.add_argument("--hold-ms", type=int, default=180)
     render.add_argument("--cycles", type=int, default=4)
     render.add_argument(

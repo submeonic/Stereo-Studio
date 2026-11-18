@@ -14,9 +14,9 @@ The anchor controls which depth stays steady; it does not cut out the subject or
 
 ## 3. Set the motion and quality
 
-Start with **Smooth 3D motion**, sweep **0.65**, **25 views**, **30 FPS**, and eased turnarounds. Larger sweep gives more movement but exposes more occlusion errors. More views at the same FPS produces a longer, smoother sweep.
+Start with **Smooth 3D motion**, sweep **0.65**, **7 views**, **20 FPS**, and eased turnarounds. Larger sweep gives more movement but exposes more occlusion errors. More views at the same FPS produces a longer, smoother sweep.
 
-The desktop defaults to 960 px geometry, 960 px preview, and 1280 px export. Preview AA and 2× export supersampling are enabled independently. Geometry is cached, so changing color or motion does not require new stereo inference. Reducing preview width can make experimentation faster without lowering export width.
+The desktop defaults to 1280 px geometry, 960 px preview, and 1280 px export. Preview AA and 2× export supersampling are enabled independently. Geometry is cached, so changing color or motion does not require new stereo inference. Reducing preview width can make experimentation faster without lowering export width.
 
 Use **Classic two-frame** to alternate the captured eyes without synthesizing intermediate views. Use **Anaglyph 3D** for one still image viewed through red-left/cyan-right glasses; motion and temporal effects are unavailable there.
 

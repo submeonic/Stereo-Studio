@@ -61,7 +61,7 @@ Choose **CPU · SGBM**. Native Windows uses the package dependency ranges; `requ
 
 ## Optional Linux NVIDIA GPU backend
 
-First complete CPU/desktop setup. You need a working NVIDIA driver, a CUDA-capable GPU supported by the pinned PyTorch 2.6.0/CUDA 12.4 runtime, sufficient VRAM, Git, and disk space for a second environment and model. Start with 960 px geometry. The local reference GPU has 16 GB VRAM; this is a tested configuration, not a guaranteed minimum. Very new GPUs may need a newer PyTorch build that this adapter has not validated.
+First complete CPU/desktop setup. You need a working NVIDIA driver, a CUDA-capable GPU supported by the pinned PyTorch 2.6.0/CUDA 12.4 runtime, sufficient VRAM, Git, and disk space for a second environment and model. The default geometry width is 1280 px; try 960 px or lower if memory or model-range limits are reached. The local reference GPU has 16 GB VRAM; this is a tested configuration, not a guaranteed minimum. Very new GPUs may need a newer PyTorch build that this adapter has not validated.
 
 ```bash
 nvidia-smi

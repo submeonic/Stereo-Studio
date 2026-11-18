@@ -14,8 +14,8 @@ from .effects import Style, anaglyph, apply_style
 class Motion:
     mode: str = "smooth"
     strength: float = 0.65
-    views: int = 25
-    fps: int = 30
+    views: int = 7
+    fps: int = 20
     hold_ms: int = 180
     cycles: int = 4
     easing: bool = True

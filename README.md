@@ -27,7 +27,7 @@ After setup:
 .\run.ps1
 ```
 
-Default desktop settings: 960 px geometry, **960 px preview**, **1280 px export**, **preview frame AA on**, and **2× export supersampling**. Preview and export quality are independent. Source resolution and crop limit recoverable detail.
+Default desktop settings: **7 views at 20 FPS**, 1280 px geometry, **960 px preview**, **1280 px export**, **preview frame AA on**, and **2× export supersampling**. Preview and export quality are independent. Source resolution and crop limit recoverable detail.
 
 ## Input and output
 

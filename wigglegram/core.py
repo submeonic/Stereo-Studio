@@ -307,7 +307,7 @@ def cache_key(source, right, width, swap, profile, backend):
 def analyze(
     source,
     right=None,
-    width=960,
+    width=1280,
     swap=False,
     profile="auto",
     backend="sgbm",
