@@ -1,5 +1,7 @@
 # Your first wigglegram
 
+This illustrated walkthrough uses actual alpha app captures with Fujifilm W3 photographs. The examples use the default render settings, with exposure at **−0.15 EV**, contrast at **0.95**, and saturation at **1.10**. The screenshots are still images; export a GIF or MP4 to see the motion.
+
 ## 1. Import a stereo photograph
 
 Open an MPO containing both eyes, or use **Open left / right JPEGs** and choose the eyes in that order. An MPO's accompanying JPEG is not needed. Choose the nominal camera profile matching W3 or Nintendo 3DS. If apparent depth is reversed, inspect the eye images and try **Swap eyes**.
@@ -20,11 +22,19 @@ The desktop defaults to 1280 px geometry, 960 px preview, and 1280 px export. Pr
 
 Use **Classic two-frame** to alternate the captured eyes without synthesizing intermediate views. Use **Anaglyph 3D** for one still image viewed through red-left/cyan-right glasses; motion and temporal effects are unavailable there.
 
+![Annotated Stereo Studio animation preview showing the view count, Build preview button, and export supersampling.](images/01-stereo-to-motion.png)
+
+The numbered callouts highlight motion settings, preview building, and export quality.
+
 ## 4. Edit the photograph
 
 In **Photo edit**, adjust exposure, warmth/tint, saturation, contrast, or sharpness. Auto color balance applies one shared correction across both eyes. Photo adjustments run after stereo estimation and view interpolation, so artistic edits do not confuse stereo matching.
 
 Choose rotation and crop aspect ratio. Draw a crop rectangle, drag inside to move it, or drag a corner to resize it. Before the first build this is provisional framing; after a build it uses the common visible output region. Rotation resets the crop. Curvature, if enabled, shows a gold outline of the sampled region inside your crop.
+
+![Annotated Photo edit tab showing exposure, saturation, and Save preset controls beside a skeleton photograph.](images/02-photo-edit.png)
+
+Use the sliders or numeric fields for subtle adjustments, then save your look as a Photo Edit preset.
 
 ## 5. Add effects if desired
 
@@ -47,6 +57,10 @@ In **Geometry**, use **Depth / disparity**, match reliability, left/right projec
 
 If an edge looks wrong, try a smaller sweep or another anchor. Preview AA and export supersampling reduce sampling jaggies, not incorrect depth. Local repair is deliberately restricted and does not blur the whole image.
 
+![Annotated Geometry tab showing a statue disparity map, diagnostic selector, local edge repair, and geometry width.](images/03-depth-and-control.png)
+
+Use these diagnostics to inspect depth and edge problems, then return to Animation to judge the result.
+
 ## 7. Export
 
 Choose **Export GIF / MP4**, or **Export JPEG** in Anaglyph mode. Export renders from original source colors at the selected export grid, then applies edits and effects. It does not simply enlarge the preview. MP4 repeats the chosen number of cycles; GIF loops indefinitely. Actual MP4 repeat behavior afterward depends on the player.
@@ -54,6 +68,10 @@ Choose **Export GIF / MP4**, or **Export JPEG** in Anaglyph mode. Export renders
 **Also save stereo assets** writes a separate bundle of aligned eye images, disparity/reliability maps, and a settings manifest. Existing asset directories are preserved; use a new name. See [asset format](ASSET_FORMAT.md).
 
 Final width is the export width after crop; height follows the aspect ratio and is rounded to an even number. A tight crop or low-resolution source reduces the benefit of supersampling. Originals are not modified.
+
+![Annotated statue animation preview highlighting sweep, preview antialiasing, and the export button.](images/04-statue-motion.png)
+
+Check the loop in Animation before exporting. The still capture above shows the edited photograph; the exported animation supplies the changing viewpoint.
 
 A saved Effects preset also works in the CLI:
 

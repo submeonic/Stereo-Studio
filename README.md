@@ -12,7 +12,7 @@ Create looping 3D wigglegrams from Fujifilm W3 or Nintendo 3DS MPO photographs, 
 ## Start here
 
 1. Follow [installation for Linux or Windows](docs/SETUP.md), choosing CPU or optional GPU setup.
-2. Follow [your first wigglegram](docs/WORKFLOW.md).
+2. Follow [your first wigglegram—the annotated screenshot walkthrough](docs/WORKFLOW.md).
 3. Use the [settings and effects glossary](docs/GLOSSARY.md) when choosing controls. Hover over main-setting labels or inputs for help.
 
 After setup:
@@ -52,6 +52,8 @@ CLI export defaults to 1280 px with 2× supersampling. `--width` controls cached
 Optional [stereo asset bundles and measured camera calibration](docs/ASSET_FORMAT.md) support reuse of aligned eyes, disparity, and settings. [Third-party notes](docs/THIRD_PARTY.md) describe the optional model and its separate terms.
 
 ## Limits and support
+
+For illustrated help with motion settings, photo edits, geometry diagnostics, and export, see the [annotated workflow guide](docs/WORKFLOW.md). For individual controls, see the [settings and effects glossary](docs/GLOSSARY.md).
 
 Hair, foliage, reflections, moving subjects, occlusions, and covered lenses can produce errors. Smaller sweeps often help. Local edge repair does not blur the whole frame, but cannot recover every missing surface. The Geometry tab provides depth/disparity, source projections, and repair diagnostics.
 
