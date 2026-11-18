@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "w3-wigglegram"
+version = "0.5.0"
+description = "Local stereo wigglegrams from W3, Nintendo 3DS, and paired photographs"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "opencv-contrib-python-headless>=4.10,<6", "Pillow>=10,<14"]
+
+[project.optional-dependencies]
+gui = ["PySide6-Essentials>=6.7,<7"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+wigglegram = "wigglegram.cli:main"
+wigglegram-gui = "wigglegram.gui:main"
+
+[tool.setuptools.packages.find]
+include = ["wigglegram*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
