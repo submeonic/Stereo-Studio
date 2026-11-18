@@ -1,5 +1,4 @@
 """Explicit setup-time download from the authors' linked Google Drive checkpoints."""
-"""Explicit setup-time download from the authors' linked Google Drive checkpoints."""
 
 import hashlib
 from pathlib import Path
